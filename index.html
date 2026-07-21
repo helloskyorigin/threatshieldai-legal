@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThreatShield AI — Legal Center</title>
+  <meta name="description" content="Official legal center for ThreatShield AI: Terms, Privacy Policy, and Support." />
+  <style>
+    :root{
+      --bg:#0b0f19;
+      --surface:#111826;
+      --surface-2:#0f1723;
+      --text:#edf2ff;
+      --muted:#98a6bd;
+      --blue:#1565ff;
+      --blue-2:#4f8cff;
+      --border:rgba(255,255,255,.08);
+      --shadow:0 18px 50px rgba(0,0,0,.35);
+      --radius:24px;
+      --radius-sm:18px;
+      --max:980px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(21,101,255,.18), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(79,140,255,.10), transparent 24%),
+        var(--bg);
+      color:var(--text);
+      min-height:100vh;
+      line-height:1.6;
+    }
+
+    a{color:inherit;text-decoration:none}
+    .wrap{
+      width:min(var(--max), calc(100% - 32px));
+      margin:0 auto;
+      padding:28px 0 36px;
+    }
+
+    .hero{
+      padding:28px;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      box-shadow:var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand-row{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:18px;
+    }
+
+    .logo{
+      width:54px;
+      height:54px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, rgba(21,101,255,.18), rgba(79,140,255,.08));
+      border:1px solid rgba(255,255,255,.10);
+      font-size:28px;
+      flex:0 0 auto;
+    }
+
+    .brand-text h1{
+      margin:0;
+      font-size:clamp(30px, 4vw, 44px);
+      line-height:1.05;
+      letter-spacing:-.04em;
+    }
+
+    .brand-text p{
+      margin:6px 0 0;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .hero-copy{
+      margin-top:14px;
+      max-width:760px;
+      color:#dbe5fb;
+      font-size:16px;
+    }
+
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--border);
+      color:#dce6fb;
+      font-size:13px;
+      white-space:nowrap;
+    }
+
+    .section{
+      margin-top:18px;
+      padding:22px;
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+      box-shadow:var(--shadow);
+    }
+
+    .section h2{
+      margin:0 0 10px;
+      font-size:20px;
+      letter-spacing:-.02em;
+    }
+
+    .section p{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:16px;
+      margin-top:18px;
+    }
+
+    .card{
+      padding:20px;
+      border-radius:var(--radius-sm);
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      min-height:160px;
+    }
+
+    .card .icon{
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:rgba(21,101,255,.12);
+      border:1px solid rgba(21,101,255,.20);
+      margin-bottom:14px;
+      font-size:20px;
+    }
+
+    .card h3{
+      margin:0 0 8px;
+      font-size:18px;
+      letter-spacing:-.02em;
+    }
+
+    .card p{
+      margin:0 0 14px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.65;
+    }
+
+    .card a.btn,
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:12px 16px;
+      border-radius:14px;
+      background:linear-gradient(135deg, var(--blue), #2d79ff);
+      color:white;
+      font-weight:700;
+      font-size:14px;
+      border:0;
+      box-shadow:0 10px 24px rgba(21,101,255,.22);
+      transition:.2s ease;
+    }
+    .btn:hover,.card a.btn:hover{transform:translateY(-1px);filter:brightness(1.03)}
+
+    .features{
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0, 1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .feature{
+      padding:18px;
+      border-radius:20px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--border);
+    }
+
+    .feature strong{
+      display:block;
+      margin-bottom:6px;
+      font-size:15px;
+    }
+
+    .feature span{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .support{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .support .text{
+      max-width:650px;
+    }
+
+    .support .text h2{
+      margin-bottom:8px;
+    }
+
+    .footer{
+      margin-top:18px;
+      padding:20px 4px 0;
+      color:var(--muted);
+      font-size:13px;
+      text-align:center;
+    }
+
+    .footer-nav{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-bottom:12px;
+    }
+
+    .footer-nav a{
+      color:#d7e2fb;
+      opacity:.9;
+    }
+
+    .footer-nav a:hover{
+      color:white;
+    }
+
+    .legal-note{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    @media (max-width: 920px){
+      .grid{grid-template-columns:1fr}
+      .features{grid-template-columns:repeat(2, minmax(0, 1fr))}
+    }
+
+    @media (max-width: 560px){
+      .wrap{width:min(var(--max), calc(100% - 22px)); padding:18px 0 26px}
+      .hero{padding:20px}
+      .section{padding:18px}
+      .brand-row{align-items:flex-start}
+      .features{grid-template-columns:1fr}
+      .card{min-height:auto}
+      .support{align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="brand-row">
+        <div class="logo">🛡️</div>
+        <div class="brand-text">
+          <h1>ThreatShield AI</h1>
+          <p>Official Legal Center</p>
+        </div>
+      </div>
+
+      <p class="hero-copy">
+        ThreatShield AI helps users analyze messages and links for scam, phishing, and suspicious activity.
+        Please review our legal pages before using the app.
+      </p>
+
+      <div class="pill-row">
+        <span class="pill">🔒 Privacy-first</span>
+        <span class="pill">⚡ AI-assisted analysis</span>
+        <span class="pill">🛡 Scam protection</span>
+        <span class="pill">✅ Sky Origin</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>About ThreatShield AI</h2>
+      <p>
+        ThreatShield AI is designed to help users detect suspicious messages, phishing attempts,
+        deceptive links, and scam-like behavior using AI-powered analysis and security checks.
+      </p>
+    </section>
+
+    <div class="grid">
+      <article class="card">
+        <div class="icon">🔒</div>
+        <h3>Privacy Policy</h3>
+        <p>Learn how scan data, app activity, and related information are handled.</p>
+        <a class="btn" href="./privacy.html">Open Privacy Policy</a>
+      </article>
+
+      <article class="card">
+        <div class="icon">📜</div>
+        <h3>Terms & Conditions</h3>
+        <p>Read the app rules, limitations, responsibilities, and disclaimer.</p>
+        <a class="btn" href="./terms.html">Open Terms</a>
+      </article>
+
+      <article class="card">
+        <div class="icon">📧</div>
+        <h3>Contact Support</h3>
+        <p>Need help, found a bug, or want to report a detection issue?</p>
+        <a class="btn" href="./contact.html">Contact Us</a>
+      </article>
+    </div>
+
+    <section class="section">
+      <h2>Key Features</h2>
+      <div class="features">
+        <div class="feature">
+          <strong>AI Scam Detection</strong>
+          <span>Analyze message intent and suspicious behavior.</span>
+        </div>
+        <div class="feature">
+          <strong>URL Risk Checks</strong>
+          <span>Inspect links for known phishing or malicious threats.</span>
+        </div>
+        <div class="feature">
+          <strong>Privacy Focused</strong>
+          <span>Built to keep user trust and safety central.</span>
+        </div>
+        <div class="feature">
+          <strong>Fast & Secure</strong>
+          <span>Clean, minimal, and easy to use on any device.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section support">
+      <div class="text">
+        <h2>Need Help?</h2>
+        <p>
+          If you have questions about ThreatShield AI, need support, or want to report an issue,
+          please visit the Contact page.
+        </p>
+      </div>
+      <a class="btn" href="./contact.html">Contact Support</a>
+    </section>
+
+    <div class="footer">
+      <div class="footer-nav">
+        <a href="./index.html">Home</a>
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html">Terms & Conditions</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+      <div>© 2026 Sky Origin. ThreatShield AI. All Rights Reserved.</div>
+      <div class="legal-note">
+        Official legal pages for ThreatShield AI.
+      </div>
+    </div>
+  </main>
+</body>
+</html>
