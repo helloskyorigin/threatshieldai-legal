@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ThreatShield AI — Contact Support</title>
+  <meta name="description" content="Official contact page for ThreatShield AI support." />
+  <style>
+    :root{
+      --bg:#0b0f19;
+      --surface:#111826;
+      --surface-2:#0f1723;
+      --text:#edf2ff;
+      --muted:#98a6bd;
+      --blue:#1565ff;
+      --blue-2:#4f8cff;
+      --border:rgba(255,255,255,.08);
+      --shadow:0 18px 50px rgba(0,0,0,.35);
+      --radius:24px;
+      --radius-sm:18px;
+      --max:980px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(21,101,255,.18), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(79,140,255,.10), transparent 24%),
+        var(--bg);
+      color:var(--text);
+      min-height:100vh;
+      line-height:1.7;
+    }
+
+    a{color:inherit;text-decoration:none}
+    .wrap{
+      width:min(var(--max), calc(100% - 32px));
+      margin:0 auto;
+      padding:28px 0 36px;
+    }
+
+    .hero{
+      padding:28px;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      box-shadow:var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .brand-row{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:18px;
+    }
+
+    .logo{
+      width:54px;
+      height:54px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, rgba(21,101,255,.18), rgba(79,140,255,.08));
+      border:1px solid rgba(255,255,255,.10);
+      font-size:28px;
+      flex:0 0 auto;
+    }
+
+    .brand-text h1{
+      margin:0;
+      font-size:clamp(30px, 4vw, 44px);
+      line-height:1.05;
+      letter-spacing:-.04em;
+    }
+
+    .brand-text p{
+      margin:6px 0 0;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .hero-copy{
+      margin-top:14px;
+      max-width:760px;
+      color:#dbe5fb;
+      font-size:16px;
+    }
+
+    .section{
+      margin-top:18px;
+      padding:22px;
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+      box-shadow:var(--shadow);
+    }
+
+    .section h2{
+      margin:0 0 10px;
+      font-size:20px;
+      letter-spacing:-.02em;
+    }
+
+    .section p{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .contact-email{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      margin-top:16px;
+      padding:14px 18px;
+      border-radius:14px;
+      background:linear-gradient(135deg, var(--blue), #2d79ff);
+      color:white;
+      font-weight:700;
+      font-size:14px;
+      box-shadow:0 10px 24px rgba(21,101,255,.22);
+      transition:.2s ease;
+      word-break:break-word;
+    }
+
+    .contact-email:hover{
+      transform:translateY(-1px);
+      filter:brightness(1.03);
+    }
+
+    .support-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:16px;
+      margin-top:18px;
+    }
+
+    .support-card{
+      padding:18px;
+      border-radius:20px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--border);
+    }
+
+    .support-card h3{
+      margin:0 0 8px;
+      font-size:17px;
+      letter-spacing:-.02em;
+    }
+
+    .support-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.65;
+    }
+
+    .note-box{
+      margin-top:14px;
+      padding:16px;
+      border-radius:18px;
+      background:rgba(21,101,255,.08);
+      border:1px solid rgba(21,101,255,.18);
+      color:#dce6fb;
+      font-size:14px;
+    }
+
+    .footer{
+      margin-top:18px;
+      padding:20px 4px 0;
+      color:var(--muted);
+      font-size:13px;
+      text-align:center;
+    }
+
+    .footer-nav{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-bottom:12px;
+    }
+
+    .footer-nav a{
+      color:#d7e2fb;
+      opacity:.9;
+    }
+
+    .footer-nav a:hover{
+      color:white;
+    }
+
+    .btn-row{
+      margin-top:16px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:12px 16px;
+      border-radius:14px;
+      background:linear-gradient(135deg, var(--blue), #2d79ff);
+      color:white;
+      font-weight:700;
+      font-size:14px;
+      border:0;
+      box-shadow:0 10px 24px rgba(21,101,255,.22);
+      transition:.2s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+      filter:brightness(1.03);
+    }
+
+    @media (max-width: 720px){
+      .support-grid{grid-template-columns:1fr}
+    }
+
+    @media (max-width: 560px){
+      .wrap{width:min(var(--max), calc(100% - 22px)); padding:18px 0 26px}
+      .hero{padding:20px}
+      .section{padding:18px}
+      .brand-row{align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="brand-row">
+        <div class="logo">🛡️</div>
+        <div class="brand-text">
+          <h1>ThreatShield AI</h1>
+          <p>Contact Support</p>
+        </div>
+      </div>
+
+      <p class="hero-copy">
+        Need help, found a bug, or want to report a detection issue?
+        We are here to help.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Contact Support</h2>
+      <p>
+        For app support, bug reports, false detections, or general questions, please email us.
+      </p>
+
+      <a class="contact-email" href="mailto:hello.skyorigin@gmail.com">
+        hello.skyorigin@gmail.com
+      </a>
+
+      <div class="note-box">
+        Typical response time: within 48 business hours.
+      </div>
+
+      <div class="btn-row">
+        <a class="btn" href="./index.html">Back to Legal Home</a>
+      </div>
+    </section>
+
+    <div class="support-grid">
+      <div class="support-card">
+        <h3>🐞 Report a Bug</h3>
+        <p>
+          Send screenshots and a short description if something is not working correctly.
+        </p>
+      </div>
+
+      <div class="support-card">
+        <h3>🛡 Report a Detection Issue</h3>
+        <p>
+          If a message or link was classified incorrectly, tell us what happened so we can improve.
+        </p>
+      </div>
+
+      <div class="support-card">
+        <h3>💡 Feature Request</h3>
+        <p>
+          Share ideas that could make ThreatShield AI more useful and trustworthy.
+        </p>
+      </div>
+
+      <div class="support-card">
+        <h3>🤝 Business / Partnership</h3>
+        <p>
+          For collaborations or partnership inquiries, please contact us by email.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-nav">
+        <a href="./index.html">Home</a>
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html">Terms & Conditions</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+      <div>© 2026 Sky Origin. ThreatShield AI. All Rights Reserved.</div>
+    </div>
+  </main>
+</body>
+</html>
